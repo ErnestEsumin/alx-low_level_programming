@@ -1,0 +1,2 @@
+echo /bin/bash
+gcc -E  .o c
