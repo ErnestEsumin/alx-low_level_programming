@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - print random number if positive,negative or zero
+ * main - Entry
  *
  * Return: 0
  */
