@@ -1,13 +1,68 @@
-#include <unistd.h>
+#include "main.h"
+/**
+ *_strlen - count array
+ *@s: array of elements
+ *Return: 1
+ */
+
+int _strlen(char *s)
+{
+unsigned int i;
+
+i = 0;
+while (s[i] != '\0') /*count character of string*/
+{
+i++;
+}
+
+return (i);
+}
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ *_strcpy - copy arrays
+ *@src: array of elements
+ *@dest: dest array
+ *Return: dest
  */
-int _putchar(char c)
+
+char *_strcpy(char *dest, char *src)
 {
-return (write(1, &c, 1));
+int i = 0;
+
+while (src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+dest[i] = '\0';
+
+return (dest);
+}
+
+/**
+ *_strdup - array for prints a string
+ *@str: array of elements
+ *Return: pointer
+ */
+
+char *_strdup(char *str)
+{
+char *dst;
+unsigned int size;
+
+if (str == 0)
+{
+return (NULL);
+}
+
+size = _strlen(str) + 1;
+
+dst = (char *) malloc(size *sizeof(char));
+
+if (dst == 0)
+{
+return (NULL);
+}
+_strcpy(dst, str);
+return (dst);
 }
