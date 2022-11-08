@@ -20,7 +20,7 @@ count = 0;
 while (count < strlen(str)) /*count string*/
 
 {
-if (!isdigit(str[count])) /*check if str there are digits*/
+if (!isdigit(str[count])) /*check if str there are digit*/
 {
 return (0);
 }
@@ -53,11 +53,11 @@ while (count < argc) /*Goes through the whole array*/
 if (check_num(argv[count]))
 
 {
-str_to_int = atoi(argv[count]) /*ATOI --> convert string to int*/
-sum + = str_to_int;
+str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
+sum += str_to_int;
 }
 
-/*condition if one of the number contains symbols that are not digits*/
+/*Condition if one of the number contains symbols that are not digits*/
 else
 {
 printf("Error\n");
