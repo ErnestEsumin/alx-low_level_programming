@@ -1,17 +1,15 @@
 #include "main.h"
-
 /**
- * print_alphabet_x10 - print 10 times the alphabet in lowercase
+ * _isalpha - function to check if c is a letter, lowercase or uppercase
+ * @c: is the int that will use for the argument of the function
+ * Return: 0
  */
-
-void print_alphabet_x10(void)
+int _isalpha(int c)
 {
-	int count = 0;
-	char letter;
-
-	while (count++ <= 9)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-			_putchar(letter);
-		_putchar('/n');
+	return (1);
 	}
+	else
+	return (0);
+}
